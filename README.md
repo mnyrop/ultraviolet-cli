@@ -87,7 +87,7 @@ The code assumes owner and the group are valid within Invenio, otherwise, they h
 ### Usage
 
 ```sh
-Usage: ultraviolet-cli delete-record [OPTIONS] PID
+Usage: ultraviolet-cli delete-record [OPTIONS] PID removalreason-pid-value [removalreason-note]
 
   Delete Record from Ultraviolet.
 
@@ -98,10 +98,10 @@ Options:
 ### Example
 
 ```sh
-pipenv run ultraviolet-cli delete-record pid1-sample
+pipenv run ultraviolet-cli delete-record pid1-sample deaccession "Officially removed by NYU staff."
 ```
 
-The code delete a published record, not a draft one.
+The code soft delete a published record, not a draft one, leave a metadata-only tombstone page.
 
 ## Upload Files
 
