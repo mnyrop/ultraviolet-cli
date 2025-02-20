@@ -6,6 +6,7 @@
 # under the terms of the MIT License; see LICENSE file for more details.
 
 """Invenio module for custom UltraViolet commands."""
+
 import os
 import uuid
 
@@ -39,7 +40,7 @@ from ultraviolet_cli.proxies import current_app, current_rdm_records
 @with_appcontext
 def upload_files(file, directory, pid):
     """Upload file for a draft."""
-    current_app["SQLALCHEMY_DATABASE_URI"] = os.getenv(
+    current_app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
         "SQLALCHEMY_DATABASE_URI",
         "postgresql+psycopg2://nyudatarepository:changeme@"
         "localhost/nyudatarepository"

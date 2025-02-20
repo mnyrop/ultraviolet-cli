@@ -35,24 +35,31 @@ setup_requires = [
 ]
 
 install_requires = [
+    'babel>=2.16.0',
     'click>=8.1.3',
     'Flask>=2.2.2',
-    'Flask-BabelEx>=0.9.4',
-    'invenio-i18n>=1.2.0',
-    'invenio-files-rest>=1.4.0',
-    'invenio-access>=1.4.4',
-    'invenio-accounts>=2.0.0',
-    'invenio-app>=1.3.4',
-    'invenio-pidstore>=1.2.3',
-    'invenio-rdm-records>=1.0.0',
-    'invenio-search>=2.1.0',
-    'opensearch-dsl>=2.0.0',
-    'opensearch-py>=2.0.0',
-    'jsonschema>=4.17.3',
-    'requests>=2.28.2',
-    'Sphinx>=3,<4',
+    'Flask-Babel>=4.0.0',
+    'invenio-app>=1.5.0',
+    'invenio-base==1.4.0',
+    'invenio-i18n>=2.1.2',
+    'invenio-files-rest>=2.2.1',
+    'invenio-access>=2.0.0',
+    'invenio-accounts>=5.1.2',
+    'invenio-pidstore>=1.3.1',
+    'invenio-rdm-records>=10.8.6',
+    'invenio-search>=2.4.1',
+    'opensearch-dsl>=2.1.0',
+    'opensearch-py>=2.7.1',
+    'jsonschema>=4.23.0',
+    'Sphinx>=7.3.7',
     'Werkzeug==2.2.2',
+    'python-dotenv',
+    'invenio-app-rdm',
+    'check-manifest',
+    'pytest',
+    'invenio-cli'
 ]
+
 
 packages = find_packages()
 
@@ -95,10 +102,6 @@ setup(
         'Programming Language :: Python',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Development Status :: 1 - Planning',
     ],

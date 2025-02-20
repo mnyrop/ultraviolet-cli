@@ -79,7 +79,7 @@ from ultraviolet_cli.utils import create_community_data
 def create_communities(desc, type, visibility, policy,
                        owner, add_group, name):
     """Create a community for Ultraviolet."""
-    current_app["SQLALCHEMY_DATABASE_URI"] = os.getenv(
+    current_app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv(
         "SQLALCHEMY_DATABASE_URI",
         "postgresql+psycopg2://nyudatarepository:changeme@"
         "localhost/nyudatarepository"
